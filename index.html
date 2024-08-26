@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto | challenge</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="" target="_blank" ><img src="img/secure1.png" alt="Logo Encriptador"></a>
+            <span class="logo-text">Andy Moncada</span>
+        </div>
+    </header>
+    <div class="contenedor">
+        <!-- Lado izquierdo -->
+        <div class="entrada">
+            <div class="texto">
+                <textarea name="iTexto" id="iTexto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="warning">
+                <img src="img/Group.png" alt="Advertencia" >
+                <p>Solo letras minusculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button type="button" id="btnEncriptar" onclick="encriptarTexto()" href="#ocultarText">Encriptar</button>
+                <button type="button" id="btnDesencriptar" onclick="desencriptarTexto()" href="#ocultarText">Desencriptar</button>
+            </div>
+        </div>
+        <!-- Lado derecho -->
+        <div class="salida">
+            <div id="divMostrarImagen" class="mostrar-imagen">
+                <img src="img/buscar.png" alt="Ningún mensaje fue encontrado">
+                <h2 class="mensaje__encontrado">Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div id="divMostrarTexto" class="mostrar-texto">
+                <textarea name="ocultarText" id="ocultarText" cols="30" rows="10" readonly></textarea>
+                <div class="boton">
+                    <button type="button" id="btnCopiar" onclick="copiarTexto()">Copiar</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

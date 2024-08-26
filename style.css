@@ -1,0 +1,334 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(#034159, #025951);
+    font-family: Courier, "Lucida Console", monospace;
+    color:#ffffff;
+}
+
+/* Logos del header */
+
+.logo {
+    padding: 1em 0;
+    background-color:none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo-text{
+    font-size: 1.5rem;
+    margin-left: 10px; /* Espacio entre el logo y el texto */
+    
+}
+
+.derecha {
+    float: right;
+    margin-right: 2em;
+}
+
+/* Contenedor principal */
+
+.contenedor {
+    /* overflow: auto; */
+    width: 100%;
+    height: calc(100vh - 84px);
+    /* background-color: #ce24c5; */
+}
+
+/* Ambos lados */
+
+.entrada, .salida {
+    float: left;
+    height: 100%;
+}
+
+/* Lado izquierdo */
+.entrada {
+    width: 70%;
+    /* background-color:#a9d3a1; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Entrada de texto */
+
+.texto {
+    height: 70%;
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto textarea {
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 80%;
+    height: 100%;
+    font-size: 2em;
+    line-height: 1.5;
+    padding: 1em;
+    color: #ffffff;
+}
+
+.texto textarea::placeholder {
+    color: #ffffff;
+}
+
+/* Adventencia minusculas */
+
+.warning {
+   
+    height: 5%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.warning img {
+    margin: 0 1.2em;
+}
+
+/*  Botones des-encriptar */
+.botones {
+    /* background-color: burlywood; */
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 5em;
+}
+
+.botones button:first-child, .botones button:last-child {
+    width: 40%;
+    height: 67px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.botones button:first-child {
+    background-color: #052051;
+    color: white;
+    border: 2px solid #052051;
+}
+
+.botones button:first-child:hover {
+    opacity: 0.8;
+}
+
+.botones button:last-child {
+    background-color: white;
+    color: #052051;
+    border: 2px solid #052051;
+}
+
+.botones button:last-child:hover {
+    background-color: #aab2d5;
+    color: #052051;
+}
+
+/* Lado derecho */
+.salida {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    /* background-color:#a1bbd3; */
+}
+
+/* Imagen */
+
+.mostrar-imagen, .mostrar-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 95%;
+}
+
+.mostrar-imagen {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    background-color: #ffffff90;
+}
+
+.mostrar-imagen img {
+    width: 80%;
+    margin: 0;
+}
+
+.mostrar-imagen h2, .mostrar-imagen p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
+
+.mostrar-imagen p {
+    padding: 0 1em;
+    color: #495057;
+}
+
+/* Texto */
+
+.mostrar-texto {
+    /* background-color:#ced3a1; */
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    background-color: #ffffff90;
+    align-items: center;
+    justify-content: center;
+}
+
+.mostrar-texto textarea {
+    background: none;
+    border: none;
+    /* border-radius: 25px; */
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    width: 100%;
+}
+
+.boton button:first-child {
+    width: 40%;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: white;
+    color: #052051;
+    border: 2px solid #052051;
+}
+
+.boton button:first-child:hover {
+    background-color: #aab2d5;
+    color: #052051;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+/*=============================================
+TABLET
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+
+    body {
+        background: linear-gradient(#a9d3a1 45%, #a1bbd3);
+    }
+
+    /**/
+    .entrada {
+        float: left;
+        width: 100%;
+    }
+
+    /**/
+    .salida {
+        float: left;
+        width: 100%;
+    }
+
+    .mostrar-texto, .mostrar-imagen {
+        height: 40vh;
+        /* ya tiene por defecto position absolute ahora centraré con: */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Lo vi en linkedin :) */
+    }
+
+    .mostrar-imagen img {
+        display: none;
+    }
+
+}
+
+/*=============================================
+MÓVIL
+=============================================*/
+
+@media (max-width:767px){
+
+        body {
+            background: linear-gradient(#a9d3a1 45%, #a1bbd3);
+        }
+
+        /**/
+        .entrada {
+            float: left;
+            width: 100%;
+        }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            padding: 2em;
+            gap: 2em;
+        }
+
+        .botones button:first-child, .botones button:last-child {
+            width: 80%;
+            height: 67px;
+        }
+
+        /**/
+        .salida {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .mostrar-imagen img {
+            
+            display: none;
+        }
+
+        .mostrar-texto, .mostrar-imagen {
+            height: 50vh;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+}
